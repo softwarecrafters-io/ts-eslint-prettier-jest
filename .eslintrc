@@ -3,15 +3,16 @@
     "parser": "@typescript-eslint/parser",
     "plugins": [
       "@typescript-eslint",
-      "no-loops"
+      "prettier"
     ],
     "extends": [
       "plugin:@typescript-eslint/eslint-recommended",
-      "plugin:@typescript-eslint/recommended"
+      "plugin:@typescript-eslint/recommended",
+      "prettier"
     ],
     "rules": { 
         "@typescript-eslint/explicit-module-boundary-types": 0,
         "no-console": 1,
-        "no-loops/no-loops": 1
+        "prettier/prettier": 1
     }
   }

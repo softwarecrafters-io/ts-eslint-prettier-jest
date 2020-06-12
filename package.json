@@ -1,31 +1,37 @@
 {
-  "name": "typescript-jest-minimal",
+  "name": "ts-eslint-prettier-jest-minimal",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "compile": "tsc -b",
-    "lint": "eslint . --ext .ts",
-    "lint:fix": "eslint . --ext .ts --fix",
-    "test": "jest",
-    "test:watch": "jest --watchAll",
-    "test:coverage": "jest --coverage",
+    "analize": "npm run lint:fix && npm run compile",
+    "compile": "tsc --noEmit",
+    "compile:watch": "npm run compile -- --watch",
+    "compile:build": "tsc -b",
+    "lint": "eslint . --ext .ts,.tsx",
+    "lint:watch": "esw --color --watch",
+    "lint:fix": "npm run lint -- --fix",
+    "format": "prettier --config .prettierrc '**/*.+(ts|tsx)'",
+    "format:fix": "npm run format -- --write",
+    "test": "jest --verbose",
+    "test:watch": "npm run test -- --watchAll",
+    "test:coverage": "npm run test -- --coverage",
     "check-updates": "ncu -u"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Softwarecrafters.io",
+  "license": "MIT",
   "devDependencies": {
     "@types/jest": "^26.0.0",
     "@typescript-eslint/eslint-plugin": "^3.2.0",
     "@typescript-eslint/parser": "^3.2.0",
     "eslint": "^7.2.0",
-    "eslint-plugin-no-loops": "^0.3.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-prettier": "^3.1.3",
+    "eslint-watch": "^7.0.0",
     "jest": "^26.0.1",
     "npm-check-updates": "^7.0.1",
+    "prettier": "^2.0.5",
     "ts-jest": "^26.1.0",
     "typescript": "^3.9.5"
-  },
-  "dependencies": {
-    "rxjs": "^6.5.5"
   }
 }
