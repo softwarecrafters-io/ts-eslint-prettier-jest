@@ -13,5 +13,5 @@ This template includes:
 [TypeScript ESLint Rules](https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin)
 
 ## Husky hooks
-Pre-commit: Executes npm analize (tsc + eslint --fix)
-Pre-push: Executes test
+* Pre-commit: Execute npm analize (tsc + eslint --fix)
+* Pre-push: Execute test
