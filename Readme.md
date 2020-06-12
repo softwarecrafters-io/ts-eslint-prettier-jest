@@ -1,6 +1,6 @@
-# TypeScript + ESLINT + Prettier + Husky with Jest. Minimal template
+# TypeScript + ESLint + Prettier + Husky with Jest. 
 
-You can use it to build a new project.
+You can use this template to build a new project or to practice Katas.
 
 This template includes:
 * TypeScript 3.9.5
@@ -10,7 +10,7 @@ This template includes:
 * Jest 26.1.0
 
 ## ESLint rules
-(TypeScript ESLint Rules)[https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin]
+[TypeScript ESLint Rules](https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin)
 
 ## Husky hooks
 Pre-commit: Executes npm analize (tsc + eslint --fix)
