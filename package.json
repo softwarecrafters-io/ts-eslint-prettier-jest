@@ -30,6 +30,7 @@
     "eslint-watch": "^7.0.0",
     "husky": "^4.2.5",
     "jest": "^26.0.1",
+    "lint-staged": "^10.2.10",
     "npm-check-updates": "^7.0.1",
     "prettier": "^2.0.5",
     "ts-jest": "^26.1.0",
@@ -37,8 +38,15 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run analize",
+      "pre-commit": "lint-staged",
       "pre-push": "npm run test"
     }
+  },
+  "lint-staged": {
+    "src/**/*.{ts,tsx}": [
+      "npm run lint:fix",
+      "npm run compile",
+      "git add"
+    ]
   }
 }
