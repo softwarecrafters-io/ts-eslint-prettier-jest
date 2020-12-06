@@ -15,3 +15,5 @@ This template includes:
 ## Husky hooks
 * Pre-commit: Execute npm analize (tsc + eslint --fix)
 * Pre-push: Execute test
+
+![TypeScript + ESLint + Prettier](logo.png)
