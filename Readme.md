@@ -1,6 +1,6 @@
 # Template - Testing Sostenible con TypeScript
 
-Plantilla practicar las katas del curso o para empezar un proyecto.
+Plantilla base para practicar las katas del curso o para empezar un proyecto nuevo.
 
 Incluye:
 * TypeScript
