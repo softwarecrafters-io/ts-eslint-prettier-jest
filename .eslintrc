@@ -13,6 +13,6 @@
     "rules": { 
         "@typescript-eslint/explicit-module-boundary-types": 0,
         "no-console": 1,
-        "prettier/prettier": 1
+        "prettier/prettier": 0
     }
   }
