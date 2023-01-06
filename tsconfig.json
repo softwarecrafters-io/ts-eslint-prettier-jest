@@ -1,5 +1,9 @@
 {
     "compilerOptions": {
+        "baseUrl": "src",
+        "paths": {
+            "@core/*": ["core/*"]
+        },
         "target": "es5",
         "module": "commonjs",
         "moduleResolution": "node",
