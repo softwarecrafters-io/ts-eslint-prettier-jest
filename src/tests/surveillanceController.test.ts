@@ -1,41 +1,36 @@
-import {MotionSensor, SurveillanceController, VideoRecorder} from "../core/surveillanceController";
+import { MotionSensor, SurveillanceController, VideoRecorder } from "../core/surveillanceController";
 
 describe('The Surveillance Controller', () => {
     it('asks the recorder to stop recording when the sensor detects no motion', () => {
-        let called = false;
-        const saveCall = () => {
-            called = true;
-        };
-        const sensor = new FakeSensor();
-        const recorder = new FakeRecorder();
-        recorder.stopRecording = saveCall;
+        const sensor = new StubSensorDetectingNotMotion();
+        const recorder = new SpyVideoRecorder();
         const controller = new SurveillanceController(sensor, recorder);
 
         controller.recordMotion();
 
-        expect(called).toBeTruthy();
+        expect(recorder.stopCalled).toBeTruthy();
     });
 
     it('asks the recorder to start recording when the sensor detects motion', () => {
-        let called = false;
-        const saveCall = () => {
-            called = true;
-        };
-        const sensor = new FakeSensor();
-        sensor.isDetectingMotion = () => true;
-        const recorder = new FakeRecorder();
-        recorder.startRecording = saveCall;
+        const sensor = new StubSensorDetectingMotion();
+        const recorder = new SpyVideoRecorder();
         const controller = new SurveillanceController(sensor, recorder);
 
         controller.recordMotion();
 
-        expect(called).toBeTruthy();
+        expect(recorder.startCalled).toBeTruthy();
     });
 });
 
-class FakeSensor implements MotionSensor {
+class StubSensorDetectingNotMotion implements MotionSensor {
     isDetectingMotion(): boolean {
         return false;
+    }
+}
+
+class StubSensorDetectingMotion implements MotionSensor {
+    isDetectingMotion(): boolean {
+        return true;
     }
 }
 
@@ -46,5 +41,18 @@ class FakeRecorder implements VideoRecorder {
 
     stopRecording(): void {
         console.log('stop recording...');
+    }
+}
+
+class SpyVideoRecorder implements VideoRecorder {
+    startCalled = false;
+    stopCalled = false;
+
+    startRecording(): void {
+        this.startCalled = true;
+    }
+
+    stopRecording(): void {
+        this.stopCalled = true;
     }
 }
