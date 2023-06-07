@@ -10,6 +10,7 @@ Incluye:
 * Husky
 
 ## Instrucciones
+* `nvm use`
 * `npm install`
 * `npm test`
 
