@@ -1,4 +1,5 @@
-# Template - Testing Sostenible con TypeScript
+# Template - Diseño Sostenible
+## Ingeniería y Artesanía del Software con TypeScript
 
 Plantilla base para practicar las katas del curso o para empezar un proyecto nuevo.
 
@@ -14,9 +15,9 @@ Incluye:
 * `npm install`
 * `npm test`
 
-Más información sobre el curso en [testingsostenible.com](https://testingsostenible.com).
+Más información sobre el curso en [diseñosostenible.com](https://diseñosostenible.com).
 
-![Testing Sostenible con TypeScript](cover.png)
+![Diseño Sostenible](coverds.png)
 
 ### ESLint
 [TypeScript ESLint Rules](https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin)
