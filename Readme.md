@@ -1,4 +1,4 @@
-# Kata Bowling
+# Template TypeScript
 ## Diseño Sostenible - Ingeniería y Artesanía del Software con TypeScript
 ![Diseño Sostenible](coverds.png)
 
