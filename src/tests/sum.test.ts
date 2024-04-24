@@ -1,3 +1,4 @@
+import { test, expect } from '@jest/globals';
 import { sum } from '../core/sum';
 
 test('should sum two numbers', () => {
