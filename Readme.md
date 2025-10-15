@@ -149,8 +149,13 @@ npm run upgrade:all     # Update all dependencies (non-interactive)
 
 ### Husky & lint-staged
 
-- **pre-commit**: Runs ESLint and Prettier on staged TypeScript files
-- **pre-push**: Runs all tests before pushing
+- **pre-commit**: 
+  - Runs ESLint and Prettier on staged TypeScript files (via lint-staged)
+  - Runs TypeScript type-checking on the entire project (compile)
+  - Blocks commit if there are type errors or unfixable linting issues
+- **pre-push**: 
+  - Runs full validation (compile + lint + test)
+  - Ensures all code is properly typed, linted, and tested before pushing
 
 ## 🎓 Learning Resources
 
