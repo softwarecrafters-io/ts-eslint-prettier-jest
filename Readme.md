@@ -37,14 +37,50 @@ Learn more about our courses and workshops at [softwarecrafters.io](https://soft
 
 ### Installation
 
+#### Option 1: Use as GitHub Template (Recommended)
+
+1. Click the **"Use this template"** button at the top of the GitHub repository
+2. Create a new repository from this template
+3. Clone your new repository:
+
 ```bash
-# Clone or download this template
-git clone <repository-url>
+git clone https://github.com/YOUR-USERNAME/YOUR-REPO-NAME.git
+cd YOUR-REPO-NAME
 
 # Install dependencies
 npm install
 
 # Run tests to verify everything works
+npm test
+```
+
+#### Option 2: Clone Directly
+
+```bash
+# Clone this repository
+git clone https://github.com/softwarecrafters-io/ts-eslint-prettier-jest.git
+cd ts-eslint-prettier-jest
+
+# Remove the original git history (optional)
+rm -rf .git
+git init
+
+# Install dependencies
+npm install
+
+# Run tests to verify everything works
+npm test
+```
+
+#### Option 3: Download as ZIP
+
+1. Download the repository as ZIP from GitHub
+2. Extract the files
+3. Install dependencies:
+
+```bash
+cd ts-eslint-prettier-jest
+npm install
 npm test
 ```
 
@@ -91,63 +127,8 @@ npm run test:ci         # Run tests in CI mode with coverage
 npm run validate        # Run compile + lint + test (full check)
 ```
 
-### Dependencies
 
-```bash
-npm run upgrade         # Interactive dependency updates
-npm run upgrade:all     # Update all dependencies (non-interactive)
-```
-
-## 📁 Project Structure
-
-```
-.
-├── src/
-│   ├── core/           # Application core logic
-│   └── tests/          # Test files
-├── lib/                # Compiled JavaScript output (generated)
-├── coverage/           # Test coverage reports (generated)
-├── .husky/             # Git hooks configuration
-│   ├── pre-commit      # Runs lint-staged
-│   └── pre-push        # Runs tests
-├── eslint.config.js    # ESLint configuration (flat config)
-├── jest.config.js      # Jest configuration
-├── tsconfig.json       # TypeScript configuration
-├── .prettierrc         # Prettier configuration
-└── package.json        # Project dependencies and scripts
-```
-
-## ⚙️ Configuration
-
-### TypeScript
-
-- **Target**: ES2020
-- **Strict Mode**: Enabled
-- **Source Maps**: Enabled
-- **Declaration Files**: Generated (.d.ts)
-
-### ESLint
-
-- TypeScript support with `@typescript-eslint`
-- Prettier integration
-- No console warnings
-- Custom rules in `eslint.config.js`
-
-### Jest
-
-- **Preset**: ts-jest
-- **Coverage Thresholds**: 80% (branches, functions, lines, statements)
-- **Reporters**: text, lcov, html
-
-### Prettier
-
-- Single quotes
-- 120 character line width
-- Semicolons enabled
-- ES5 trailing commas
-- 2 spaces indentation
-
-### Husky & lint-staged
+## ⚙️ Husky & lint-staged
 
 - **pre-commit**: 
   - Runs ESLint and Prettier on staged TypeScript files (via lint-staged)
@@ -157,25 +138,6 @@ npm run upgrade:all     # Update all dependencies (non-interactive)
   - Runs full validation (compile + lint + test)
   - Ensures all code is properly typed, linted, and tested before pushing
 
-## 🎓 Learning Resources
-
-### Courses
-
-Visit [softwarecrafters.io](https://softwarecrafters.io) to learn more about it.
-
-### Documentation
-
-- [TypeScript Handbook](https://www.typescriptlang.org/docs/)
-- [TypeScript ESLint Rules](https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin)
-- [Jest Documentation](https://jestjs.io/docs/getting-started)
-- [ESLint v9 Migration Guide](https://eslint.org/docs/latest/use/configure/migration-guide)
-
-## 🛡️ Security
-
-```bash
-npm audit          # Check for vulnerabilities
-npm audit fix      # Fix vulnerabilities automatically
-```
 
 ## 🤝 Contributing
 
