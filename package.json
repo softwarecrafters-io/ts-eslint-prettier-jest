@@ -1,22 +1,30 @@
 {
   "name": "ts-eslint-prettier-jest-minimal",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "TypeScript template with ESLint, Prettier and Jest",
+  "main": "lib/index.js",
   "scripts": {
-    "analize": "npm run lint:fix && npm run compile",
+    "prepare": "husky install",
+    "dev": "tsc --watch",
+    "build": "npm run clean && tsc -b",
+    "clean": "rm -rf lib coverage",
+    "analyze": "npm run lint:fix && npm run compile",
     "compile": "tsc --noEmit",
-    "compile:watch": "npm run compile -- --watch",
+    "compile:watch": "tsc --noEmit --watch",
     "compile:build": "tsc -b",
     "lint": "eslint . --ext .ts,.tsx",
     "lint:watch": "esw --color --watch",
-    "lint:fix": "npm run lint -- --fix",
+    "lint:fix": "eslint . --ext .ts,.tsx --fix",
     "format": "prettier --config .prettierrc '**/*.+(ts|tsx)'",
-    "format:fix": "npm run format -- --write",
+    "format:check": "prettier --config .prettierrc '**/*.+(ts|tsx)' --check",
+    "format:fix": "prettier --config .prettierrc '**/*.+(ts|tsx)' --write",
     "test": "jest --verbose",
-    "test:watch": "npm run test -- --watchAll",
-    "test:coverage": "npm run test -- --coverage",
-    "upgrade": "ncu -u"
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "test:ci": "jest --ci --coverage --maxWorkers=2",
+    "validate": "npm run compile && npm run lint && npm run test",
+    "upgrade": "ncu -i",
+    "upgrade:all": "ncu -u"
   },
   "author": "Softwarecrafters.io",
   "license": "MIT",
@@ -37,17 +45,10 @@
     "typescript": "^5.8.3",
     "@types/node": "^24.1.0"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged",
-      "pre-push": "npm run test"
-    }
-  },
   "lint-staged": {
     "*.+(ts|tsx)": [
-      "npm run lint:fix",
-      "npm run compile",
-      "git add . "
+      "eslint --fix",
+      "prettier --write"
     ]
   }
 }
