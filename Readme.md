@@ -156,12 +156,7 @@ npm run upgrade:all     # Update all dependencies (non-interactive)
 
 ### Courses
 
-Visit [softwarecrafters.io](https://softwarecrafters.io) to learn more about:
-- Clean Code and Software Craftsmanship
-- Test-Driven Development (TDD)
-- Design Patterns and SOLID Principles
-- Refactoring Techniques
-- Sustainable Software Development
+Visit [softwarecrafters.io](https://softwarecrafters.io) to learn more about it.
 
 ### Documentation
 
