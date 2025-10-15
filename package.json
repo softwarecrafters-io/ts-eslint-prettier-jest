@@ -14,6 +14,8 @@
     "compile:build": "tsc -b",
     "lint": "eslint . --ext .ts,.tsx",
     "lint:fix": "eslint . --ext .ts,.tsx --fix",
+    "lint-staged": "lint-staged",
+    "lint-staged:debug": "lint-staged --debug",
     "format": "prettier --config .prettierrc '**/*.+(ts|tsx)'",
     "format:check": "prettier --config .prettierrc '**/*.+(ts|tsx)' --check",
     "format:fix": "prettier --config .prettierrc '**/*.+(ts|tsx)' --write",
