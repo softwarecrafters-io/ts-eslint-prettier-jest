@@ -41,6 +41,7 @@
     "@jest/globals": "30.4.1",
     "@types/jest": "30.0.0",
     "@types/node": "26.3.0",
+    "@typescript/native": "npm:typescript@7.0.2",
     "@typescript-eslint/eslint-plugin": "8.68.0",
     "@typescript-eslint/parser": "8.68.0",
     "eslint": "10.9.1",
@@ -52,7 +53,7 @@
     "npm-check-updates": "23.1.0",
     "prettier": "3.9.6",
     "ts-jest": "29.4.12",
-    "typescript": "6.0.3"
+    "typescript": "npm:@typescript/typescript6@6.0.2"
   },
   "lint-staged": {
     "*.+(ts|tsx)": [

@@ -1,8 +1,8 @@
 # TypeScript Template with ESLint, Prettier & Jest
 
-[![TypeScript](https://img.shields.io/badge/TypeScript-6.0-blue.svg)](https://www.typescriptlang.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-7.0-blue.svg)](https://www.typescriptlang.org/)
 [![ESLint](https://img.shields.io/badge/ESLint-10-4B32C3.svg)](https://eslint.org/)
-[![Prettier](https://img.shields.io/badge/Prettier-3.8-F7B93E.svg)](https://prettier.io/)
+[![Prettier](https://img.shields.io/badge/Prettier-3.9-F7B93E.svg)](https://prettier.io/)
 [![Jest](https://img.shields.io/badge/Jest-30-C21325.svg)](https://jestjs.io/)
 [![pnpm](https://img.shields.io/badge/pnpm-10-F69220.svg)](https://pnpm.io/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -21,14 +21,17 @@ Learn more about our courses and workshops at [softwarecrafters.io](https://soft
 
 ## ✨ Features
 
-- **TypeScript 6** - Latest TypeScript with strict mode enabled (`node16` module resolution)
+- **TypeScript 7** - Native TypeScript compiler with strict mode enabled (`node16` module resolution)
 - **ESLint 10** - Flat config system with TypeScript support
-- **Prettier 3.8** - Opinionated code formatter
+- **Prettier 3.9** - Opinionated code formatter
 - **Jest 30** - Delightful JavaScript Testing Framework with coverage thresholds
 - **Husky 9** - Git hooks made easy (pre-commit & pre-push)
 - **lint-staged** - Run linters on git staged files
 - **pnpm only** - Package manager enforced via `only-allow` (npm & yarn are blocked)
 - **Strict TypeScript** - Comprehensive type checking for better code quality
+
+TypeScript 7 does not expose a programmatic API yet. Project compilation uses TypeScript 7, while
+ESLint and `ts-jest` use the official TypeScript 6 compatibility package through an npm alias.
 
 ## 🚀 Quick Start
 
