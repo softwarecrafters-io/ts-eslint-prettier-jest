@@ -5,7 +5,6 @@
     "lib": ["ES2020"],
     "moduleResolution": "node16",
     "isolatedModules": true,
-    "jsx": "react",
     "outDir": "./lib",
     "rootDir": "./src",
     "strict": true,
